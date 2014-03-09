@@ -1,5 +1,5 @@
-//#ifndef __JSMN_H_
-//#define __JSMN_H_
+#ifndef __JSMN_H_
+#define __JSMN_H_
 
 /**
  * JSON type identifier. Basic types are:
@@ -64,4 +64,4 @@ void jsmn_init(jsmn_parser *parser);
 jsmnerr_t jsmn_parse(jsmn_parser *parser, const char *js, 
 		jsmntok_t *tokens, unsigned int num_tokens);
 
-//#endif /* __JSMN_H_ */
+#endif /* __JSMN_H_ */

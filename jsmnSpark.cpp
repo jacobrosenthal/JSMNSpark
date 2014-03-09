@@ -1,4 +1,5 @@
 #include "jsmnSpark.h"
+#include "Arduino.h"
 
 /**
  * Allocates a fresh unused token from the token pull.
