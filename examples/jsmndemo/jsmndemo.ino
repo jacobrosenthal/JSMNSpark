@@ -15,9 +15,10 @@
 	Serial.print(" start: "); Serial.print((t).start); Serial.print(" end: "); Serial.println((t).end)
 
 
-void setup() {
-
-	Serial.begin(9600);
+void setup() 
+{
+  Serial.begin(9600);
+  while(!Serial);
 }
 
 unsigned long wait = millis();
@@ -33,8 +34,7 @@ void loop() {
 	// This is the full JSON test string - Array of one object containg 6 string objects
 	js = "  [{\"id\":\"1\",\"timestamp\":\"1337\",\"username\":\"kaul\"}]";
 
-	if (!Serial.available())
-	    return;
+
 
     obj[0] = Serial.read();
     
@@ -70,4 +70,6 @@ void loop() {
 		}
 	}
 	Serial.println(" ");
+
+        while(1);
 }
